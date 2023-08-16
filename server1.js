@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 const app = express()
 // const router = express.Router()
-const port = 8080;
+const port = 8080 || process.env.PORT;
 const __dirname = dirname(fileURLToPath(import.meta.url))
 // const input = Search();
 

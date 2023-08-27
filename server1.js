@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 const app = express()
 // const router = express.Router()
-const port = 8080;
+const port = process.env.PORT||8080;
 const __dirname = dirname(fileURLToPath(import.meta.url))
 // const input = Search();
 
@@ -30,6 +30,6 @@ app.get('/',(req,res)=>{
 //     // console.log(input.name)
 // });
 
-app.listen(port || process.env.PORT, ()=>{
+app.listen(port , ()=>{
     console.log("Server is running on "+port)
 })
